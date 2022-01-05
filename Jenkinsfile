@@ -5,6 +5,7 @@ pipeline{
             steps{
                  git branch: 'main', url: 'https://github.com/rapsurgy/mongo_db'
             }
+        }
         stage("deploy to AKS"){
             steps{
                 script{
@@ -14,9 +15,9 @@ pipeline{
                         enableConfigSubstitution: true         
                         )
                 }
-
             }
-        }
-        }
+        }   
+    
+        
     }
 }
