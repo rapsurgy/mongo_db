@@ -10,7 +10,10 @@ pipeline{
             steps{
                 script{
                     kubernetesDeploy(
-                        configs: "mongodb-secret.yaml", "configmap.yaml", "mongo.yaml", "mongoexpress.yaml",
+                        configs: "mongodb-secret.yaml",
+                        configs: "configmap.yaml",
+                        configs: "mongo.yaml",
+                        configs: "mongoexpress.yaml",
                         kubeconfigid: 'K8S',    
                         enableConfigSubstitution: true         
                         )
