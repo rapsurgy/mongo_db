@@ -13,22 +13,7 @@ pipeline{
                         configs: "mongodb-secret.yaml",
                         kubeconfigid: 'K8S',    
                         enableConfigSubstitution: false
-                        )
-                    kubernetesDeploy(
-                        configs: "configmap.yaml",
-                        kubeconfigid: 'K8S',    
-                        enableConfigSubstitution: false         
-                        )
-                    kubernetesDeploy(
-                        configs: "mongo.yaml",
-                        kubeconfigid: 'K8S',    
-                        enableConfigSubstitution: false         
-                        )
-                    kubernetesDeploy(
-                        configs: "mongoexpress.yaml",
-                        kubeconfigid: 'K8S',    
-                        enableConfigSubstitution: false         
-                        )            
+                        )          
                 }
             }
         }   
